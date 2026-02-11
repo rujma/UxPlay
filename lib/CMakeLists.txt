@@ -139,7 +139,7 @@ endif()
 
 #dns_sd 
 if ( NOT APPLE )
-  pkg_search_module(AVAHI_DNSSD avahi-compat-libdns_sd)
+  pkg_search_module(AVAHI_DNSSD avahi)
   if (AVAHI_DNSSD_FOUND)
     target_include_directories( airplay PRIVATE ${AVAHI_DNSSD_INCLUDE_DIRS} )
     find_library( DNSSD ${AVAHI_DNSSD_LIBRARIES} PATH ${AVAHI_DNSSD_LIBDIR})
